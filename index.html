@@ -3,143 +3,302 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mayquel Bernaola | Portafolio</title>
+  <title>Mayquel Bernaola | Analista de Datos</title>
+  <meta name="description" content="Portafolio de Mayquel Bernaola — Analista de Datos y Analista Programador especializado en transformación, modelado y visualización de información estratégica.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<header class="header">
-  <div class="profile">
-    <img src="profile.png" alt="foto">
+<!-- NAVEGACIÓN -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">
+    <span class="logo-text">MB</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#home" class="nav-link active">Home</a></li>
+    <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+    <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
+    <li><a href="#tecnologias" class="nav-link">Habilidades</a></li>
+    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
+    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+  </ul>
+  <button class="nav-menu-btn" id="menuBtn" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-    <div class="info">
-      <h1>Mayquel Carlos Bernaola Benites</h1>
-      <p class="role">Estudiante de Ingeniería de Sistemas</p>
-      <span class="location">📍 Lima, Perú</span>
+<!-- Social Sidebar (esquina izquierda, vertical) -->
+<div class="social-sidebar">
+  <a href="https://www.linkedin.com/in/mayquel-bernaola-benites-136561357/" target="_blank" aria-label="LinkedIn" class="sidebar-social-link">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+  <a href="https://github.com/maykelcb" target="_blank" aria-label="GitHub" class="sidebar-social-link">
+    <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:Maykelcb095@gmail.com" aria-label="Email" class="sidebar-social-link">
+    <i class="fas fa-envelope"></i>
+  </a>
+  <div class="sidebar-line"></div>
+</div>
 
-      <div class="buttons">
-        <a href="cv.pdf" target="_blank" class="btn primary">Ver CV</a>
+<!-- HERO / INICIO -->
+<section class="hero" id="home">
+  <!-- Partículas decorativas -->
+  <div class="hero-particles" id="heroParticles"></div>
+  
+  <!-- Patrón de puntos decorativo -->
+  <div class="dot-pattern dot-pattern-1"></div>
+  <div class="dot-pattern dot-pattern-2"></div>
 
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Maykelcb095@gmail.com&su=Contacto%20desde%20portafolio"
-   target="_blank"
-   class="btn secondary">
-   Contactar
+  <div class="hero-content">
+    <div class="hero-text">
+      <p class="hero-greeting">
+        <span class="greeting-line"></span>
+        Hey! Soy
+      </p>
+      <h1 class="hero-name">Mayquel Bernaola</h1>
+      <div class="hero-role-wrapper">
+        <span class="hero-role" id="heroRole">ANALISTA DE DATOS</span>
+        <span class="role-cursor">|</span>
+      </div>
+      <p class="hero-description">
+        Analista de datos y analista programador con sólido enfoque en la transformación, modelado y visualización de información estratégica. Especializado en convertir grandes volúmenes de datos en soluciones accionables mediante programación y herramientas analíticas. Apasionado por optimizar procesos y potenciar la toma de decisiones basada en métricas precisas.
+      </p>
+      <div class="hero-buttons">
+        <a href="cv.pdf" target="_blank" class="btn btn-primary" id="btnCV">
+          <i class="fas fa-download"></i>
+          Descargar CV
         </a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Maykelcb095@gmail.com&su=Contacto%20desde%20portafolio"
+           target="_blank" class="btn btn-secondary" id="btnContact">
+          <i class="fas fa-paper-plane"></i>
+          Contacto
+        </a>
+      </div>
+
+
+    </div>
+
+    <div class="hero-image">
+      <div class="silhouette-composition">
+        <!-- Capa de fondo: elementos de datos -->
+        <img src="silhouette-bg.jpg" alt="" class="silhouette-data-bg" aria-hidden="true">
+        <!-- Capa frontal: silueta original del usuario -->
+        <img src="silhouette.jpg" alt="Mayquel Bernaola" class="silhouette-main">
+        <!-- Borde sutil -->
+        <div class="silhouette-border"></div>
       </div>
     </div>
   </div>
 
-  <button id="toggleTheme">🌙</button>
-</header>
-
-<main class="container">
-
-  <!-- SOBRE MI -->
-  <section class="card">
-  <h2>Sobre mí</h2>
-  <p>
-    Soy estudiante de Ingeniería en Sistemas en 9° ciclo, con un fuerte interés en el desarrollo de software,
-    análisis de datos y creación de soluciones tecnológicas que generen impacto real.
-  </p>
-
-  <p>
-    Me considero una persona proactiva, con gran capacidad de adaptación y un enfoque constante en el aprendizaje.
-    Disfruto explorar nuevas tecnologías, mantenerme actualizado en el ámbito tecnológico y enfrentar retos que me
-    permitan mejorar tanto a nivel técnico como profesional.
-  </p>
-
-  <p>
-    He participado en el desarrollo de proyectos enfocados en la optimización de procesos, tanto a nivel de software
-    como de análisis de datos, aplicando buenas prácticas de desarrollo, metodologías ágiles como Scrum y diseño de
-    interfaces centradas en el usuario.
-  </p>
-
-  <p>
-    Mi objetivo es seguir creciendo como profesional en el área de tecnología, especializándome en desarrollo y
-    ciencia de datos, y aportar soluciones innovadoras dentro de equipos de trabajo.
-  </p>
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <span>Scroll</span>
+  </div>
 </section>
 
-  <!-- EXPERIENCIA -->
-  <section class="card">
-    <h2>Experiencia</h2>
+<!-- SOBRE MÍ -->
+<section class="section" id="sobre-mi">
+  <div class="section-container">
+    <h2 class="section-title">
+      <span class="title-number">01.</span>
+      Sobre mí
+    </h2>
+    <div class="about-content">
+      <p>
+        Soy estudiante de Ingeniería en Sistemas en 9° ciclo, con un fuerte interés en el desarrollo de software,
+        análisis de datos y creación de soluciones tecnológicas que generen impacto real.
+      </p>
+      <p>
+        Me considero una persona proactiva, con gran capacidad de adaptación y un enfoque constante en el aprendizaje.
+        Disfruto explorar nuevas tecnologías, mantenerme actualizado en el ámbito tecnológico y enfrentar retos que me
+        permitan mejorar tanto a nivel técnico como profesional.
+      </p>
+      <p>
+        He participado en el desarrollo de proyectos enfocados en la optimización de procesos, tanto a nivel de software
+        como de análisis de datos, aplicando buenas prácticas de desarrollo, metodologías ágiles como Scrum y diseño de
+        interfaces centradas en el usuario.
+      </p>
+      <p>
+        Mi objetivo es seguir creciendo como profesional en el área de tecnología, especializándome en desarrollo y
+        ciencia de datos, y aportar soluciones innovadoras dentro de equipos de trabajo.
+      </p>
+    </div>
+  </div>
+</section>
 
+<!-- EXPERIENCIA -->
+<section class="section" id="experiencia">
+  <div class="section-container">
+    <h2 class="section-title">
+      <span class="title-number">02.</span>
+      Experiencia
+    </h2>
     <div class="timeline">
-      <div>
-        <h3>Proyecto Social - Sistema para Ollas Comunes</h3>
-        <p>
-          Desarrollo de plataforma web para gestión y distribución de alimentos en coordinación con ONG.
-          Implementación de Scrum, diseño en Figma y desarrollo de funcionalidades clave.
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Proyecto Social - Sistema para Ollas Comunes</h3>
+          <p>
+            Desarrollo de plataforma web para gestión y distribución de alimentos en coordinación con ONG.
+            Implementación de Scrum, diseño en Figma y desarrollo de funcionalidades clave.
+          </p>
+        </div>
       </div>
-
-      <div>
-        <h3>Desarrollo con C# y SQL Server</h3>
-        <p>
-          Creación de aplicación de escritorio con backend en .NET, manejo de base de datos relacional
-          y consultas avanzadas.
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Desarrollo con C# y SQL Server</h3>
+          <p>
+            Creación de aplicación de escritorio con backend en .NET, manejo de base de datos relacional
+            y consultas avanzadas.
+          </p>
+        </div>
       </div>
-
-      <div>
-        <h3>Análisis de Datos con Power BI</h3>
-        <p>
-          Modelado de datos, creación de dashboards interactivos y uso de DAX y Power Query.
-        </p>
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <h3>Análisis de Datos con Power BI</h3>
+          <p>
+            Modelado de datos, creación de dashboards interactivos y uso de DAX y Power Query.
+          </p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TECNOLOGIAS -->
-  <section class="card">
-    <h2>Tecnologías</h2>
-
-    <div class="tags">
-      <span>Python</span>
-      <span>SQL</span>
-      <span>C# (.NET)</span>
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>Power BI</span>
-      <span>Excel</span>
+<!-- TECNOLOGÍAS -->
+<section class="section" id="tecnologias">
+  <div class="section-container">
+    <h2 class="section-title">
+      <span class="title-number">03.</span>
+      Habilidades
+    </h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fab fa-python"></i></div>
+        <h3>Python</h3>
+        <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-database"></i></div>
+        <h3>SQL</h3>
+        <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-code"></i></div>
+        <h3>C# (.NET)</h3>
+        <div class="skill-bar"><div class="skill-fill" data-level="75"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fab fa-html5"></i></div>
+        <h3>HTML / CSS</h3>
+        <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fab fa-js-square"></i></div>
+        <h3>JavaScript</h3>
+        <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+        <h3>Power BI</h3>
+        <div class="skill-bar"><div class="skill-fill" data-level="88"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
+        <h3>Excel</h3>
+        <div class="skill-bar"><div class="skill-fill" data-level="92"></div></div>
+      </div>
+      <div class="skill-card">
+        <div class="skill-icon"><i class="fas fa-chart-area"></i></div>
+        <h3>Data Analytics</h3>
+        <div class="skill-bar"><div class="skill-fill" data-level="82"></div></div>
+      </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- PROYECTOS -->
-  <section class="card">
-    <h2>Proyectos Destacados</h2>
-
-    <div class="projects">
-      <div class="project">
+<!-- PROYECTOS -->
+<section class="section" id="proyectos">
+  <div class="section-container">
+    <h2 class="section-title">
+      <span class="title-number">04.</span>
+      Proyectos Destacados
+    </h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-utensils"></i></div>
         <h3>Sistema de Ollas Comunes</h3>
         <p>Optimización de distribución de alimentos con ONG usando Scrum.</p>
+        <div class="project-tags">
+          <span>Scrum</span><span>Web</span><span>Figma</span>
+        </div>
       </div>
-
-      <div class="project">
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-desktop"></i></div>
         <h3>Sistema en C# + SQL</h3>
         <p>Aplicación de escritorio para gestión de datos.</p>
+        <div class="project-tags">
+          <span>C#</span><span>.NET</span><span>SQL Server</span>
+        </div>
       </div>
-
-      <div class="project">
+      <div class="project-card">
+        <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
         <h3>Dashboard Power BI</h3>
         <p>Visualización de datos con indicadores dinámicos.</p>
+        <div class="project-tags">
+          <span>Power BI</span><span>DAX</span><span>Power Query</span>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- CONTACTO -->
-  <section class="card">
-    <h2>Contacto</h2>
-    <p>📧 Maykelcb095@gmail.com</p>
-    <p>📱 902839563</p>
-    <p>
-      <a href="https://github.com/maykelcb" target="_blank">GitHub</a> |
-      <a href="https://www.linkedin.com/in/mayquel-bernaola-benites-136561357/" target="_blank">LinkedIn</a>
-    </p>
-  </section>
+<!-- CONTACTO -->
+<section class="section" id="contacto">
+  <div class="section-container">
+    <h2 class="section-title">
+      <span class="title-number">05.</span>
+      Contacto
+    </h2>
+    <div class="contact-grid">
+      <a href="mailto:Maykelcb095@gmail.com" class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <h3>Email</h3>
+        <p>Maykelcb095@gmail.com</p>
+      </a>
+      <a href="tel:+51902839563" class="contact-card">
+        <i class="fas fa-phone"></i>
+        <h3>Teléfono</h3>
+        <p>902 839 563</p>
+      </a>
+      <a href="https://github.com/maykelcb" target="_blank" class="contact-card">
+        <i class="fab fa-github"></i>
+        <h3>GitHub</h3>
+        <p>maykelcb</p>
+      </a>
+      <a href="https://www.linkedin.com/in/mayquel-bernaola-benites-136561357/" target="_blank" class="contact-card">
+        <i class="fab fa-linkedin-in"></i>
+        <h3>LinkedIn</h3>
+        <p>Mayquel Bernaola</p>
+      </a>
+    </div>
+  </div>
+</section>
 
-</main>
+<!-- FOOTER -->
+<footer class="footer">
+  <p>&copy; 2026 Mayquel Bernaola. Todos los derechos reservados.</p>
+</footer>
 
 <script src="script.js"></script>
 </body>
