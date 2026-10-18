@@ -925,11 +925,10 @@ a {
     order: -1;
   }
 
-  .silhouette-frame {
+  .silhouette-composition {
     width: 260px;
     height: 260px;
   }
-}
 }
 
 @media (max-width: 768px) {
@@ -981,7 +980,7 @@ a {
     font-size: 16px;
   }
 
-  .silhouette-frame {
+  .silhouette-composition {
     width: 200px;
     height: 200px;
   }
