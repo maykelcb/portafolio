@@ -460,11 +460,8 @@ a {
 
 .silhouette-composition {
   position: relative;
-  width: 420px;
-  height: 420px;
-  border-radius: 50%;
-  overflow: hidden;
-  background: radial-gradient(circle at 45% 45%, #151b30 0%, #0d1017 80%);
+  width: 440px;
+  height: 440px;
 }
 
 /* Capa de fondo: elementos de datos (gráficos, binario, etc.) */
@@ -473,11 +470,10 @@ a {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  opacity: 0.55;
+  object-fit: contain;
+  opacity: 0.95;
   z-index: 1;
-  mix-blend-mode: screen;
+  pointer-events: none;
 }
 
 /* Capa principal: silueta del usuario */
@@ -486,26 +482,8 @@ a {
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+  object-fit: contain;
   z-index: 2;
-  mix-blend-mode: lighten;
-}
-
-/* Borde sutil dorado */
-.silhouette-border {
-  position: absolute;
-  inset: -2px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(201, 160, 99, 0.2);
-  z-index: 3;
-  pointer-events: none;
-  animation: glowPulse 4s ease-in-out infinite;
-}
-
-@keyframes glowPulse {
-  0%, 100% { box-shadow: 0 0 20px rgba(201, 160, 99, 0.05); }
-  50% { box-shadow: 0 0 40px rgba(201, 160, 99, 0.18); }
 }
 
 /* Scroll indicator */
@@ -926,8 +904,8 @@ a {
   }
 
   .silhouette-composition {
-    width: 260px;
-    height: 260px;
+    width: 320px;
+    height: 320px;
   }
 }
 
@@ -981,8 +959,8 @@ a {
   }
 
   .silhouette-composition {
-    width: 200px;
-    height: 200px;
+    width: 260px;
+    height: 260px;
   }
 
   .social-sidebar {
