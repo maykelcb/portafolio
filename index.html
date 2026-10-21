@@ -3,45 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mayquel Bernaola | Analista de Datos</title>
-  <meta name="description" content="Portafolio de Mayquel Bernaola — Analista de Datos y Analista Programador especializado en transformación, modelado y visualización de información estratégica.">
+  <title>Mayquel Bernaola | Analista de Datos & Desarrollador</title>
+  <meta name="description" content="Portafolio de Mayquel Bernaola — Analista de Datos y Desarrollador especializado en modelado, transformación de datos y soluciones de software estratégicas.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Ambient Cursor Glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
 <!-- NAVEGACIÓN -->
 <nav class="navbar" id="navbar">
   <div class="nav-logo">
-    <span class="logo-text">MB</span>
+    <a href="#home" class="logo-link">
+      <span class="logo-text">MB</span>
+      <span class="logo-dot"></span>
+    </a>
   </div>
-  <ul class="nav-links">
-    <li><a href="#home" class="nav-link active">Home</a></li>
-    <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
-    <li><a href="#experiencia" class="nav-link">Experiencia</a></li>
-    <li><a href="#tecnologias" class="nav-link">Habilidades</a></li>
-    <li><a href="#proyectos" class="nav-link">Proyectos</a></li>
-    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home" class="nav-link active"><span class="nav-num">00.</span> Home</a></li>
+    <li><a href="#sobre-mi" class="nav-link"><span class="nav-num">01.</span> Sobre mí</a></li>
+    <li><a href="#habilidades" class="nav-link"><span class="nav-num">02.</span> Habilidades</a></li>
+    <li><a href="#formacion" class="nav-link"><span class="nav-num">03.</span> Formación</a></li>
+    <li><a href="#proyectos" class="nav-link"><span class="nav-num">04.</span> Proyectos</a></li>
+    <li><a href="#contacto" class="nav-link"><span class="nav-num">05.</span> Contacto</a></li>
   </ul>
-  <button class="nav-menu-btn" id="menuBtn" aria-label="Abrir menú">
-    <span></span><span></span><span></span>
-  </button>
+  <div class="nav-actions">
+    <a href="cv.pdf" target="_blank" class="nav-cv-btn" id="navCvBtn">
+      <i class="fas fa-file-pdf"></i>
+      <span>CV</span>
+    </a>
+    <button class="nav-menu-btn" id="menuBtn" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
 </nav>
 
 <!-- Social Sidebar (esquina izquierda, vertical) -->
 <div class="social-sidebar">
-  <a href="https://www.linkedin.com/in/mayquel-bernaola-benites-136561357/" target="_blank" aria-label="LinkedIn" class="sidebar-social-link">
+  <a href="https://www.linkedin.com/in/mayquel-bernaola-benites-136561357/" target="_blank" aria-label="LinkedIn" class="sidebar-social-link" title="LinkedIn">
     <i class="fab fa-linkedin-in"></i>
   </a>
-  <a href="https://github.com/maykelcb" target="_blank" aria-label="GitHub" class="sidebar-social-link">
+  <a href="https://github.com/maykelcb" target="_blank" aria-label="GitHub" class="sidebar-social-link" title="GitHub">
     <i class="fab fa-github"></i>
   </a>
-  <a href="mailto:Maykelcb095@gmail.com" aria-label="Email" class="sidebar-social-link">
+  <a href="mailto:Maykelcb095@gmail.com" aria-label="Email" class="sidebar-social-link" title="Enviar Email">
     <i class="fas fa-envelope"></i>
   </a>
+  <a href="https://wa.me/51902839563" target="_blank" aria-label="WhatsApp" class="sidebar-social-link" title="WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+  <div class="sidebar-line"></div>
+</div>
+
+<!-- Quick Email Sidebar (esquina derecha, vertical) -->
+<div class="email-sidebar">
+  <a href="mailto:Maykelcb095@gmail.com" class="sidebar-email-text">Maykelcb095@gmail.com</a>
   <div class="sidebar-line"></div>
 </div>
 
@@ -50,176 +71,412 @@
   <!-- Partículas decorativas -->
   <div class="hero-particles" id="heroParticles"></div>
   
-  <!-- Patrón de puntos decorativo -->
+  <!-- Patrón de puntos y resplandor decorativo -->
   <div class="dot-pattern dot-pattern-1"></div>
   <div class="dot-pattern dot-pattern-2"></div>
+  <div class="hero-glow hero-glow-1"></div>
+  <div class="hero-glow hero-glow-2"></div>
 
   <div class="hero-content">
     <div class="hero-text">
+      <div class="hero-badge">
+        <span class="status-pulse"></span>
+        <span>Disponible para nuevos proyectos y retos</span>
+      </div>
+
       <p class="hero-greeting">
         <span class="greeting-line"></span>
-        Hey! Soy
+        Hola, mi nombre es
       </p>
       <h1 class="hero-name">Mayquel Bernaola</h1>
+      
       <div class="hero-role-wrapper">
         <span class="hero-role" id="heroRole">ANALISTA DE DATOS</span>
         <span class="role-cursor">|</span>
       </div>
+
       <p class="hero-description">
-        Analista de datos y analista programador con sólido enfoque en la transformación, modelado y visualización de información estratégica. Especializado en convertir grandes volúmenes de datos en soluciones accionables mediante programación y herramientas analíticas. Apasionado por optimizar procesos y potenciar la toma de decisiones basada en métricas precisas.
+        Estudiante de <strong>Ingeniería de Sistemas</strong> con enfoque analítico y de desarrollo. Especializado en convertir grandes volúmenes de datos en <strong>soluciones accionables</strong>, optimización de procesos y creación de interfaces centradas en el usuario.
       </p>
+
       <div class="hero-buttons">
         <a href="cv.pdf" target="_blank" class="btn btn-primary" id="btnCV">
-          <i class="fas fa-download"></i>
+          <i class="fas fa-file-arrow-down"></i>
           Descargar CV
         </a>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Maykelcb095@gmail.com&su=Contacto%20desde%20portafolio"
-           target="_blank" class="btn btn-secondary" id="btnContact">
+        <a href="#contacto" class="btn btn-secondary" id="btnContact">
           <i class="fas fa-paper-plane"></i>
-          Contacto
+          Hablemos
         </a>
       </div>
 
-
+      <!-- Quick Metrics Strip -->
+      <div class="hero-metrics">
+        <div class="metric-item">
+          <span class="metric-number">9°</span>
+          <span class="metric-label">Ciclo Ing. Sistemas</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-number">+10</span>
+          <span class="metric-label">Tecnologías & Herramientas</span>
+        </div>
+        <div class="metric-divider"></div>
+        <div class="metric-item">
+          <span class="metric-number">100%</span>
+          <span class="metric-label">Enfoque Analítico</span>
+        </div>
+      </div>
     </div>
 
     <div class="hero-image">
-      <div class="silhouette-composition">
+      <div class="silhouette-composition" id="silhouetteWrapper">
+        <!-- Glow circular ambiental -->
+        <div class="silhouette-glow"></div>
         <!-- Capa de fondo: elementos de datos -->
         <img src="silhouette-bg.png" alt="" class="silhouette-data-bg" aria-hidden="true">
         <!-- Capa frontal: silueta original del usuario -->
         <img src="silhouette.png" alt="Mayquel Bernaola" class="silhouette-main">
+        
+        <!-- Floating Interactive Badges -->
+        <div class="floating-badge badge-data">
+          <i class="fas fa-chart-line"></i>
+          <span>Data-Driven</span>
+        </div>
+        <div class="floating-badge badge-code">
+          <i class="fas fa-terminal"></i>
+          <span>Clean Code</span>
+        </div>
       </div>
     </div>
   </div>
 
   <!-- Scroll indicator -->
-  <div class="scroll-indicator">
+  <a href="#sobre-mi" class="scroll-indicator" aria-label="Ir a Sobre mí">
     <div class="mouse">
       <div class="wheel"></div>
     </div>
-    <span>Scroll</span>
-  </div>
+    <span>Explorar</span>
+  </a>
 </section>
 
-<!-- SOBRE MÍ -->
+<!-- SOBRE MÍ (Bento Grid) -->
 <section class="section" id="sobre-mi">
   <div class="section-container">
-    <h2 class="section-title">
-      <span class="title-number">01.</span>
-      Sobre mí
-    </h2>
-    <div class="about-content">
-      <p>
-        Soy estudiante de Ingeniería en Sistemas en 9° ciclo, con un fuerte interés en el desarrollo de software,
-        análisis de datos y creación de soluciones tecnológicas que generen impacto real.
-      </p>
-      <p>
-        Me considero una persona proactiva, con gran capacidad de adaptación y un enfoque constante en el aprendizaje.
-        Disfruto explorar nuevas tecnologías, mantenerme actualizado en el ámbito tecnológico y enfrentar retos que me
-        permitan mejorar tanto a nivel técnico como profesional.
-      </p>
-      <p>
-        He participado en el desarrollo de proyectos enfocados en la optimización de procesos, tanto a nivel de software
-        como de análisis de datos, aplicando buenas prácticas de desarrollo, metodologías ágiles como Scrum y diseño de
-        interfaces centradas en el usuario.
-      </p>
-      <p>
-        Mi objetivo es seguir creciendo como profesional en el área de tecnología, especializándome en desarrollo y
-        ciencia de datos, y aportar soluciones innovadoras dentro de equipos de trabajo.
-      </p>
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="title-number">01.</span>
+        Sobre mí
+      </h2>
+      <p class="section-subtitle">Conoce mi perfil, enfoque profesional y lo que me impulsa cada día.</p>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Card Principal: Biografía -->
+      <div class="bento-card bento-bio">
+        <div class="card-icon-tag"><i class="fas fa-user-astronaut"></i></div>
+        <h3>Perfil Profesional</h3>
+        <p>
+          Soy estudiante de <strong>Ingeniería de Sistemas en 9° ciclo</strong>, apasionado por la confluencia entre la ciencia de datos, el análisis estratégico y el desarrollo de software moderno.
+        </p>
+        <p>
+          Mi propósito es transformar datos dispersos en decisiones claras y construir herramientas digitales que resuelvan problemas operativos reales con impacto medible.
+        </p>
+        <div class="bio-highlights">
+          <span class="highlight-chip"><i class="fas fa-check-circle"></i> Proactivo & Autodidacta</span>
+          <span class="highlight-chip"><i class="fas fa-check-circle"></i> Pensamiento Crítico</span>
+          <span class="highlight-chip"><i class="fas fa-check-circle"></i> Trabajo en Equipo</span>
+        </div>
+      </div>
+
+      <!-- Card Estado Actual -->
+      <div class="bento-card bento-status">
+        <div class="status-top">
+          <span class="badge-live"><span class="dot-live"></span> En Búsqueda Activa</span>
+        </div>
+        <h4>Objetivo Inmediato</h4>
+        <p>
+          Incorporarme a equipos dinámicos donde pueda aportar en <strong>análisis de datos, inteligencia de negocios o desarrollo de software</strong>, continuando mi especialización técnica.
+        </p>
+        <div class="academic-badge">
+          <i class="fas fa-graduation-cap"></i>
+          <div>
+            <strong>Ingeniería de Sistemas</strong>
+            <span>9° Ciclo • Próximo a egresar</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card Enfoque & Pilares -->
+      <div class="bento-card bento-pillars">
+        <div class="card-icon-tag"><i class="fas fa-compass"></i></div>
+        <h3>Mi Enfoque de Trabajo</h3>
+        <div class="pillars-list">
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fas fa-database"></i></div>
+            <div>
+              <strong>Modelado & Precisión</strong>
+              <p>Datos limpios, estructuras relacionales sólidas y métricas confiables.</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fas fa-chart-pie"></i></div>
+            <div>
+              <strong>Visualización Accionable</strong>
+              <p>Dashboards dinámicos en Power BI que responden preguntas de negocio.</p>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fas fa-users-gear"></i></div>
+            <div>
+              <strong>Metodologías Ágiles</strong>
+              <p>Desarrollo colaborativo iterativo bajo marcos Scrum y buenas prácticas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card CV & Descarga Rápida -->
+      <div class="bento-card bento-action">
+        <div class="card-icon-tag"><i class="fas fa-file-lines"></i></div>
+        <h3>Currículum Vitae</h3>
+        <p>Revisa mi trayectoria académica, proyectos detallados y habilidades técnicas completas.</p>
+        <a href="cv.pdf" target="_blank" class="btn btn-primary btn-block">
+          <i class="fas fa-download"></i> Ver / Descargar CV (PDF)
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCIA -->
-<section class="section" id="experiencia">
+<!-- HABILIDADES (Skills con Categorías y Spotlight) -->
+<section class="section" id="habilidades">
   <div class="section-container">
-    <h2 class="section-title">
-      <span class="title-number">02.</span>
-      Experiencia
-    </h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Proyecto Social - Sistema para Ollas Comunes</h3>
-          <p>
-            Desarrollo de plataforma web para gestión y distribución de alimentos en coordinación con ONG.
-            Implementación de Scrum, diseño en Figma y desarrollo de funcionalidades clave.
-          </p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Desarrollo con C# y SQL Server</h3>
-          <p>
-            Creación de aplicación de escritorio con backend en .NET, manejo de base de datos relacional
-            y consultas avanzadas.
-          </p>
-        </div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h3>Análisis de Datos con Power BI</h3>
-          <p>
-            Modelado de datos, creación de dashboards interactivos y uso de DAX y Power Query.
-          </p>
-        </div>
-      </div>
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="title-number">02.</span>
+        Habilidades Técnicas
+      </h2>
+      <p class="section-subtitle">Tecnologías y herramientas que utilizo para transformar datos y construir soluciones.</p>
     </div>
-  </div>
-</section>
 
-<!-- TECNOLOGÍAS -->
-<section class="section" id="tecnologias">
-  <div class="section-container">
-    <h2 class="section-title">
-      <span class="title-number">03.</span>
-      Habilidades
-    </h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fab fa-python"></i></div>
+    <!-- Filtros de categoría -->
+    <div class="skills-filter">
+      <button class="filter-btn active" data-filter="all">Todas</button>
+      <button class="filter-btn" data-filter="data">Datos & BI</button>
+      <button class="filter-btn" data-filter="dev">Desarrollo Software</button>
+      <button class="filter-btn" data-filter="tools">Herramientas & Flujo</button>
+    </div>
+
+    <div class="skills-grid" id="skillsGrid">
+      <!-- Python -->
+      <div class="skill-card" data-category="data">
+        <div class="skill-spotlight"></div>
+        <div class="skill-header">
+          <div class="skill-icon py-icon"><i class="fab fa-python"></i></div>
+          <span class="skill-tag">Data / ETL</span>
+        </div>
         <h3>Python</h3>
+        <p class="skill-desc">Pandas, NumPy, scripts de automatización y análisis exploratorio de datos.</p>
+        <div class="skill-meta">
+          <span class="skill-level-text">Avanzado</span>
+          <span class="skill-percentage">85%</span>
+        </div>
         <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
       </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-database"></i></div>
-        <h3>SQL</h3>
+
+      <!-- SQL -->
+      <div class="skill-card" data-category="data">
+        <div class="skill-spotlight"></div>
+        <div class="skill-header">
+          <div class="skill-icon sql-icon"><i class="fas fa-database"></i></div>
+          <span class="skill-tag">Bases de Datos</span>
+        </div>
+        <h3>SQL (Server / MySQL)</h3>
+        <p class="skill-desc">Diseño relacional, consultas complejas, optimización, joins y triggers.</p>
+        <div class="skill-meta">
+          <span class="skill-level-text">Experto</span>
+          <span class="skill-percentage">90%</span>
+        </div>
         <div class="skill-bar"><div class="skill-fill" data-level="90"></div></div>
       </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-code"></i></div>
-        <h3>C# (.NET)</h3>
-        <div class="skill-bar"><div class="skill-fill" data-level="75"></div></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fab fa-html5"></i></div>
-        <h3>HTML / CSS</h3>
-        <div class="skill-bar"><div class="skill-fill" data-level="80"></div></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fab fa-js-square"></i></div>
-        <h3>JavaScript</h3>
-        <div class="skill-bar"><div class="skill-fill" data-level="70"></div></div>
-      </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-chart-pie"></i></div>
+
+      <!-- Power BI -->
+      <div class="skill-card" data-category="data">
+        <div class="skill-spotlight"></div>
+        <div class="skill-header">
+          <div class="skill-icon pbi-icon"><i class="fas fa-chart-pie"></i></div>
+          <span class="skill-tag">BI & Analytics</span>
+        </div>
         <h3>Power BI</h3>
+        <p class="skill-desc">Modelado dimensional, métricas con DAX, Power Query y dashboards ejecutivos.</p>
+        <div class="skill-meta">
+          <span class="skill-level-text">Avanzado</span>
+          <span class="skill-percentage">88%</span>
+        </div>
         <div class="skill-bar"><div class="skill-fill" data-level="88"></div></div>
       </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-file-excel"></i></div>
-        <h3>Excel</h3>
+
+      <!-- Excel -->
+      <div class="skill-card" data-category="data">
+        <div class="skill-spotlight"></div>
+        <div class="skill-header">
+          <div class="skill-icon xls-icon"><i class="fas fa-file-excel"></i></div>
+          <span class="skill-tag">Análisis</span>
+        </div>
+        <h3>Excel Avanzado</h3>
+        <p class="skill-desc">Power Query, tablas dinámicas, fórmulas analíticas avanzadas y modelos financieros.</p>
+        <div class="skill-meta">
+          <span class="skill-level-text">Experto</span>
+          <span class="skill-percentage">92%</span>
+        </div>
         <div class="skill-bar"><div class="skill-fill" data-level="92"></div></div>
       </div>
-      <div class="skill-card">
-        <div class="skill-icon"><i class="fas fa-chart-area"></i></div>
-        <h3>Data Analytics</h3>
+
+      <!-- C# .NET -->
+      <div class="skill-card" data-category="dev">
+        <div class="skill-spotlight"></div>
+        <div class="skill-header">
+          <div class="skill-icon cs-icon"><i class="fas fa-code"></i></div>
+          <span class="skill-tag">Backend / Desktop</span>
+        </div>
+        <h3>C# (.NET)</h3>
+        <p class="skill-desc">Desarrollo de aplicaciones de escritorio y empresariales, arquitectura por capas.</p>
+        <div class="skill-meta">
+          <span class="skill-level-text">Intermedio-Alto</span>
+          <span class="skill-percentage">75%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-level="75"></div></div>
+      </div>
+
+      <!-- JavaScript -->
+      <div class="skill-card" data-category="dev">
+        <div class="skill-spotlight"></div>
+        <div class="skill-header">
+          <div class="skill-icon js-icon"><i class="fab fa-js-square"></i></div>
+          <span class="skill-tag">Frontend Logic</span>
+        </div>
+        <h3>JavaScript</h3>
+        <p class="skill-desc">Manipulación del DOM, consumo de APIs REST, lógica asíncrona y dinamismo web.</p>
+        <div class="skill-meta">
+          <span class="skill-level-text">Intermedio</span>
+          <span class="skill-percentage">72%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-level="72"></div></div>
+      </div>
+
+      <!-- HTML5 & CSS3 -->
+      <div class="skill-card" data-category="dev">
+        <div class="skill-spotlight"></div>
+        <div class="skill-header">
+          <div class="skill-icon html-icon"><i class="fab fa-html5"></i></div>
+          <span class="skill-tag">Web Core</span>
+        </div>
+        <h3>HTML5 & CSS3</h3>
+        <p class="skill-desc">Diseño responsivo, Grid, Flexbox, animaciones modernas y glassmorphism.</p>
+        <div class="skill-meta">
+          <span class="skill-level-text">Avanzado</span>
+          <span class="skill-percentage">85%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+      </div>
+
+      <!-- Git & GitHub -->
+      <div class="skill-card" data-category="tools">
+        <div class="skill-spotlight"></div>
+        <div class="skill-header">
+          <div class="skill-icon git-icon"><i class="fab fa-git-alt"></i></div>
+          <span class="skill-tag">Control de Versiones</span>
+        </div>
+        <h3>Git & GitHub</h3>
+        <p class="skill-desc">Flujo de ramas, commits convencionales, colaboración en equipo y repositorios.</p>
+        <div class="skill-meta">
+          <span class="skill-level-text">Avanzado</span>
+          <span class="skill-percentage">82%</span>
+        </div>
         <div class="skill-bar"><div class="skill-fill" data-level="82"></div></div>
+      </div>
+
+      <!-- Scrum & Agilidad -->
+      <div class="skill-card" data-category="tools">
+        <div class="skill-spotlight"></div>
+        <div class="skill-header">
+          <div class="skill-icon scrum-icon"><i class="fas fa-arrows-rotate"></i></div>
+          <span class="skill-tag">Gestión</span>
+        </div>
+        <h3>Scrum & Metodologías</h3>
+        <p class="skill-desc">Gestión ágil de proyectos, sprints, historias de usuario y tableros Kanban/Trello.</p>
+        <div class="skill-meta">
+          <span class="skill-level-text">Avanzado</span>
+          <span class="skill-percentage">85%</span>
+        </div>
+        <div class="skill-bar"><div class="skill-fill" data-level="85"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORMACIÓN & TRAYECTORIA -->
+<section class="section" id="formacion">
+  <div class="section-container">
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="title-number">03.</span>
+        Formación & Trayectoria
+      </h2>
+      <p class="section-subtitle">Educación formal, especializaciones y experiencia aplicada.</p>
+    </div>
+
+    <div class="education-grid">
+      <!-- Tarjeta 1: Universidad -->
+      <div class="education-card">
+        <div class="education-badge"><i class="fas fa-university"></i> Universidad</div>
+        <div class="education-icon"><i class="fas fa-graduation-cap"></i></div>
+        <h3>Ingeniería de Sistemas</h3>
+        <span class="education-period"><i class="far fa-calendar-alt"></i> 2021 — Presente (9° Ciclo)</span>
+        <p class="education-desc">
+          Formación integral orientada a la ingeniería de software, arquitectura de sistemas, modelado de bases de datos relacionales, estadística aplicada y optimización algorítmica.
+        </p>
+        <div class="education-tags">
+          <span>Bases de Datos</span>
+          <span>Arquitectura Software</span>
+          <span>Algoritmos</span>
+          <span>Gestión de Proyectos</span>
+        </div>
+      </div>
+
+      <!-- Tarjeta 2: Formación en Datos y BI -->
+      <div class="education-card">
+        <div class="education-badge"><i class="fas fa-certificate"></i> Especialización</div>
+        <div class="education-icon"><i class="fas fa-chart-line"></i></div>
+        <h3>Análisis de Datos & Business Intelligence</h3>
+        <span class="education-period"><i class="far fa-calendar-alt"></i> 2023 — 2024</span>
+        <p class="education-desc">
+          Capacitación intensiva en extracción, modelado y visualización de datos con Power BI, DAX avanzado, Power Query y consultas estructuradas en SQL Server.
+        </p>
+        <div class="education-tags">
+          <span>Power BI</span>
+          <span>DAX</span>
+          <span>Power Query</span>
+          <span>Modelado Dimensional</span>
+        </div>
+      </div>
+
+      <!-- Tarjeta 3: Desarrollo & Metodologías -->
+      <div class="education-card">
+        <div class="education-badge"><i class="fas fa-laptop-code"></i> Experiencia Aplicada</div>
+        <div class="education-icon"><i class="fas fa-diagram-project"></i></div>
+        <h3>Desarrollo de Software & Metodologías Ágiles</h3>
+        <span class="education-period"><i class="far fa-calendar-alt"></i> 2023 — Presente</span>
+        <p class="education-desc">
+          Participación activa en el desarrollo de soluciones de software, proyectos comunitarios y aplicaciones con .NET/C#, aplicando marcos ágiles Scrum y diseño centrado en el usuario.
+        </p>
+        <div class="education-tags">
+          <span>Scrum</span>
+          <span>C# .NET</span>
+          <span>Figma</span>
+          <span>Clean Architecture</span>
+        </div>
       </div>
     </div>
   </div>
@@ -228,33 +485,140 @@
 <!-- PROYECTOS -->
 <section class="section" id="proyectos">
   <div class="section-container">
-    <h2 class="section-title">
-      <span class="title-number">04.</span>
-      Proyectos Destacados
-    </h2>
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="title-number">04.</span>
+        Proyectos Destacados
+      </h2>
+      <p class="section-subtitle">Casos prácticos y sistemas desarrollados. Espacio preparado para futuros lanzamientos.</p>
+    </div>
+
     <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-utensils"></i></div>
-        <h3>Sistema de Ollas Comunes</h3>
-        <p>Optimización de distribución de alimentos con ONG usando Scrum.</p>
-        <div class="project-tags">
-          <span>Scrum</span><span>Web</span><span>Figma</span>
+      <!-- Proyecto 1: Ollas Comunes -->
+      <div class="project-showcase-card">
+        <div class="project-window-bar">
+          <div class="window-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <span class="window-title">sistema-ollas-comunes.app</span>
+        </div>
+        <div class="project-card-body">
+          <div class="project-type-tag">Proyecto Social & Web</div>
+          <h3 class="project-title">Sistema de Gestión para Ollas Comunes</h3>
+          <p class="project-description">
+            Plataforma web diseñada para optimizar la logística, control de donaciones y distribución transparente de raciones en comedores comunitarios junto a ONG, aplicando el marco ágil Scrum.
+          </p>
+          <div class="project-tech-tags">
+            <span><i class="fas fa-arrows-rotate"></i> Scrum</span>
+            <span><i class="fab fa-figma"></i> Figma UI</span>
+            <span><i class="fas fa-globe"></i> Web Platform</span>
+            <span><i class="fas fa-database"></i> Gestión de Datos</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/maykelcb" target="_blank" class="btn-project-code">
+              <i class="fab fa-github"></i> Repositorio
+            </a>
+            <a href="#contacto" class="btn-project-demo">
+              <i class="fas fa-arrow-up-right-from-square"></i> Consultar Demo
+            </a>
+          </div>
         </div>
       </div>
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-desktop"></i></div>
-        <h3>Sistema en C# + SQL</h3>
-        <p>Aplicación de escritorio para gestión de datos.</p>
-        <div class="project-tags">
-          <span>C#</span><span>.NET</span><span>SQL Server</span>
+
+      <!-- Proyecto 2: C# y SQL Server -->
+      <div class="project-showcase-card">
+        <div class="project-window-bar">
+          <div class="window-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <span class="window-title">gestion-datos-desktop.net</span>
+        </div>
+        <div class="project-card-body">
+          <div class="project-type-tag">Desktop & Enterprise</div>
+          <h3 class="project-title">Sistema Empresarial en C# + SQL Server</h3>
+          <p class="project-description">
+            Aplicación de escritorio con arquitectura robusta en .NET para administración de registros, control transaccional y consultas relacionales optimizadas con SQL Server.
+          </p>
+          <div class="project-tech-tags">
+            <span><i class="fas fa-code"></i> C#</span>
+            <span><i class="fas fa-layer-group"></i> .NET</span>
+            <span><i class="fas fa-database"></i> SQL Server</span>
+            <span><i class="fas fa-shield-halved"></i> Transacciones</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/maykelcb" target="_blank" class="btn-project-code">
+              <i class="fab fa-github"></i> Repositorio
+            </a>
+            <a href="#contacto" class="btn-project-demo">
+              <i class="fas fa-arrow-up-right-from-square"></i> Detalles
+            </a>
+          </div>
         </div>
       </div>
-      <div class="project-card">
-        <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
-        <h3>Dashboard Power BI</h3>
-        <p>Visualización de datos con indicadores dinámicos.</p>
-        <div class="project-tags">
-          <span>Power BI</span><span>DAX</span><span>Power Query</span>
+
+      <!-- Proyecto 3: Dashboard Power BI -->
+      <div class="project-showcase-card">
+        <div class="project-window-bar">
+          <div class="window-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <span class="window-title">analytics-kpi-dashboard.pbi</span>
+        </div>
+        <div class="project-card-body">
+          <div class="project-type-tag">Business Intelligence</div>
+          <h3 class="project-title">Dashboard Analítico & KPIs en Power BI</h3>
+          <p class="project-description">
+            Solución interactiva de inteligencia de negocios para el seguimiento de métricas clave, segmentación temporal y análisis comparativo mediante fórmulas DAX y transformación en Power Query.
+          </p>
+          <div class="project-tech-tags">
+            <span><i class="fas fa-chart-pie"></i> Power BI</span>
+            <span><i class="fas fa-calculator"></i> DAX</span>
+            <span><i class="fas fa-filter"></i> Power Query</span>
+            <span><i class="fas fa-chart-line"></i> KPIs</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/maykelcb" target="_blank" class="btn-project-code">
+              <i class="fab fa-github"></i> Repositorio
+            </a>
+            <a href="#contacto" class="btn-project-demo">
+              <i class="fas fa-arrow-up-right-from-square"></i> Ver Dashboard
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 4: Próximamente (Placeholder dinámico) -->
+      <div class="project-showcase-card card-upcoming">
+        <div class="project-window-bar">
+          <div class="window-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <span class="window-title">proximamente-en-desarrollo.dev</span>
+        </div>
+        <div class="project-card-body">
+          <div class="project-type-tag upcoming-tag"><i class="fas fa-sparkles"></i> En Construcción</div>
+          <h3 class="project-title">Nuevos Proyectos en Camino</h3>
+          <p class="project-description">
+            Actualmente trabajando en nuevas aplicaciones web full-stack y proyectos de analítica avanzada con Python y visualización interactiva. ¡Estarán disponibles muy pronto!
+          </p>
+          <div class="project-tech-tags">
+            <span><i class="fab fa-react"></i> React / Next.js</span>
+            <span><i class="fab fa-python"></i> Data Science</span>
+            <span><i class="fas fa-cloud"></i> Cloud APIs</span>
+          </div>
+          <div class="project-actions">
+            <a href="https://github.com/maykelcb" target="_blank" class="btn-project-code">
+              <i class="fab fa-github"></i> Seguir en GitHub
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -264,39 +628,153 @@
 <!-- CONTACTO -->
 <section class="section" id="contacto">
   <div class="section-container">
-    <h2 class="section-title">
-      <span class="title-number">05.</span>
-      Contacto
-    </h2>
-    <div class="contact-grid">
-      <a href="mailto:Maykelcb095@gmail.com" class="contact-card">
-        <i class="fas fa-envelope"></i>
-        <h3>Email</h3>
-        <p>Maykelcb095@gmail.com</p>
-      </a>
-      <a href="tel:+51902839563" class="contact-card">
-        <i class="fas fa-phone"></i>
-        <h3>Teléfono</h3>
-        <p>902 839 563</p>
-      </a>
-      <a href="https://github.com/maykelcb" target="_blank" class="contact-card">
-        <i class="fab fa-github"></i>
-        <h3>GitHub</h3>
-        <p>maykelcb</p>
-      </a>
-      <a href="https://www.linkedin.com/in/mayquel-bernaola-benites-136561357/" target="_blank" class="contact-card">
-        <i class="fab fa-linkedin-in"></i>
-        <h3>LinkedIn</h3>
-        <p>Mayquel Bernaola</p>
-      </a>
+    <div class="section-header">
+      <h2 class="section-title">
+        <span class="title-number">05.</span>
+        Contacto
+      </h2>
+      <p class="section-subtitle">¿Tienes una propuesta, pregunta o quieres conversar sobre un proyecto? Escríbeme.</p>
+    </div>
+
+    <div class="contact-wrapper">
+      <!-- Columna 1: Formulario Glassmorphism -->
+      <div class="contact-form-container">
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="contactName">Nombre completo</label>
+            <div class="input-wrapper">
+              <i class="fas fa-user input-icon"></i>
+              <input type="text" id="contactName" name="name" placeholder="Tu nombre o empresa" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactEmail">Correo electrónico</label>
+            <div class="input-wrapper">
+              <i class="fas fa-at input-icon"></i>
+              <input type="email" id="contactEmail" name="email" placeholder="correo@ejemplo.com" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactSubject">Asunto</label>
+            <div class="input-wrapper">
+              <i class="fas fa-tag input-icon"></i>
+              <input type="text" id="contactSubject" name="subject" placeholder="Oportunidad / Consulta / Proyecto" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="contactMessage">Mensaje</label>
+            <div class="input-wrapper">
+              <i class="fas fa-comment-dots input-icon-textarea"></i>
+              <textarea id="contactMessage" name="message" rows="4" placeholder="Cuéntame sobre la propuesta o idea..." required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-submit" id="btnSubmit">
+            <i class="fas fa-paper-plane"></i>
+            <span>Enviar Mensaje</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Columna 2: Cards de Contacto Rápido -->
+      <div class="contact-cards-container">
+        <!-- Email Directo con Copiar -->
+        <div class="contact-info-card email-highlight-card">
+          <div class="contact-icon-box">
+            <i class="fas fa-envelope-open-text"></i>
+          </div>
+          <div class="contact-info-text">
+            <h4>Correo Electrónico</h4>
+            <p id="emailText">Maykelcb095@gmail.com</p>
+          </div>
+          <div class="card-btn-group">
+            <button type="button" class="btn-copy-email" id="btnCopyEmail" title="Copiar correo">
+              <i class="fas fa-copy"></i>
+              <span>Copiar</span>
+            </button>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=Maykelcb095@gmail.com&su=Contacto%20desde%20Portafolio" target="_blank" class="btn-open-email" title="Abrir en Gmail">
+              <i class="fas fa-external-link-alt"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/mayquel-bernaola-benites-136561357/" target="_blank" class="contact-info-card">
+          <div class="contact-icon-box in-icon">
+            <i class="fab fa-linkedin-in"></i>
+          </div>
+          <div class="contact-info-text">
+            <h4>LinkedIn</h4>
+            <p>Mayquel Bernaola</p>
+          </div>
+          <i class="fas fa-arrow-right card-arrow"></i>
+        </a>
+
+        <!-- GitHub -->
+        <a href="https://github.com/maykelcb" target="_blank" class="contact-info-card">
+          <div class="contact-icon-box gh-icon">
+            <i class="fab fa-github"></i>
+          </div>
+          <div class="contact-info-text">
+            <h4>GitHub</h4>
+            <p>github.com/maykelcb</p>
+          </div>
+          <i class="fas fa-arrow-right card-arrow"></i>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/51902839563?text=Hola%20Mayquel,%20vi%20tu%20portafolio%20y%20me%20gustar%C3%ADa%20conversar." target="_blank" class="contact-info-card">
+          <div class="contact-icon-box wa-icon">
+            <i class="fab fa-whatsapp"></i>
+          </div>
+          <div class="contact-info-text">
+            <h4>WhatsApp / Teléfono</h4>
+            <p>+51 902 839 563</p>
+          </div>
+          <i class="fas fa-arrow-right card-arrow"></i>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <p>&copy; 2026 Mayquel Bernaola. Todos los derechos reservados.</p>
+  <div class="footer-content">
+    <div class="footer-logo">
+      <span class="logo-text">MB</span>
+    </div>
+    <p class="footer-quote">
+      "Transformando datos en conocimiento, y conocimiento en decisiones estratégicas."
+    </p>
+    <div class="footer-socials">
+      <a href="https://www.linkedin.com/in/mayquel-bernaola-benites-136561357/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://github.com/maykelcb" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="mailto:Maykelcb095@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://wa.me/51902839563" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Mayquel Bernaola. Diseñado con excelencia y código limpio.</p>
+    </div>
+  </div>
 </footer>
+
+<!-- Toast de Notificación -->
+<div class="toast-notification" id="toastNotification">
+  <i class="fas fa-circle-check"></i>
+  <span id="toastMessage">¡Copiado al portapapeles!</span>
+</div>
+
+<!-- Scroll to Top con Progreso Circular -->
+<button class="scroll-top-btn" id="scrollTopBtn" aria-label="Volver arriba">
+  <svg class="progress-ring" width="48" height="48">
+    <circle class="progress-ring-circle" stroke="currentColor" stroke-width="3" fill="transparent" r="20" cx="24" cy="24"/>
+  </svg>
+  <i class="fas fa-arrow-up"></i>
+</button>
 
 <script src="script.js"></script>
 </body>
